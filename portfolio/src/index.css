@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+
+  /* DIFFERENT MAIN BACKGROUND */
+  background: linear-gradient(
+    160deg,
+    #020617 0%,
+    #0F172A 40%,
+    #1E293B 100%
+  );
+
+  color: #E2E8F0;
+}
+
+/* GLOBAL COLORS */
+:root {
+  --primary-blue: #3B82F6;
+  --dark-navy: #020617;
+  --glass-bg: rgba(15, 23, 42, 0.6);
+}
+
+/* PREMIUM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 10px;
+}
+
+/* Sparkle styles */
+.sprinkle {
+  position: absolute;
+  width: 6px;           /* small size */
+  height: 6px;          /* small size */
+  background: #38BDF8;  /* light blue sparkle */
+  border-radius: 50%;
+  pointer-events: none; /* don't block clicks */
+  z-index: 9999;
+  opacity: 0.8;
+  animation: sprinkle-fade 0.5s forwards;
+}
+
+@keyframes sprinkle-fade {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.5) translateY(-10px);
+    opacity: 0;
+  }
+}
