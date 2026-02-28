@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -8,54 +8,71 @@ const Footer = () => {
         .footer {
           background: linear-gradient(180deg, #0b1120, #0f172a);
           color: #cbd5e1;
-          padding: 50px 10%;
+          padding: 25px 8%;
           text-align: center;
           border-top: 1px solid rgba(255,255,255,0.08);
         }
 
         .footer-name {
-          font-size: 1.6rem;
+          font-size: 1.2rem;
           font-weight: 600;
-          color: white;
-          margin-bottom: 10px;
+          color: #ffffff;
+          margin-bottom: 6px;
+          letter-spacing: 0.5px;
         }
 
         .footer-tagline {
-          font-size: 0.9rem;
-          margin-bottom: 25px;
+          font-size: 0.85rem;
+          margin-bottom: 14px;
           color: #94a3b8;
         }
 
         .footer-icons {
           display: flex;
           justify-content: center;
-          gap: 25px;
-          margin-bottom: 25px;
+          gap: 18px;
+          margin-bottom: 14px;
         }
 
         .footer-icons a {
-          width: 45px;
-          height: 45px;
+          width: 36px;
+          height: 36px;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 50%;
           background: rgba(255,255,255,0.05);
           color: #cbd5e1;
-          font-size: 1.2rem;
+          font-size: 1rem;
           transition: all 0.3s ease;
         }
 
         .footer-icons a:hover {
           background: #2563eb;
-          color: white;
-          transform: translateY(-4px);
-          box-shadow: 0 0 15px rgba(37,99,235,0.6);
+          color: #ffffff;
+          transform: translateY(-3px);
+          box-shadow: 0 0 10px rgba(37,99,235,0.6);
         }
 
         .footer-copy {
-          font-size: 0.8rem;
+          font-size: 0.75rem;
           color: #64748b;
+          margin-top: 8px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+          .footer {
+            padding: 20px 6%;
+          }
+
+          .footer-name {
+            font-size: 1.1rem;
+          }
+
+          .footer-tagline {
+            font-size: 0.8rem;
+          }
         }
       `}</style>
 
@@ -63,22 +80,21 @@ const Footer = () => {
         <div className="footer-name">Swetha</div>
 
         <div className="footer-tagline">
-          Passionate about building clean, scalable and impactful applications.
+          Building clean, scalable and impactful digital experiences.
         </div>
 
         <div className="footer-icons">
 
           {/* Email */}
           <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=swethaa1805@email.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Send Email"
-         >
-  <FaEnvelope />
-</a>
+            href="mailto:swethaa1805@email.com"
+            title="Send Email"
+          >
+            <FaEnvelope />
+          </a>
+
           {/* LinkedIn */}
-          <a 
+          <a
             href="https://www.linkedin.com/in/swetha-a-0b1712382/"
             target="_blank"
             rel="noopener noreferrer"
@@ -88,9 +104,8 @@ const Footer = () => {
           </a>
 
           {/* GitHub */}
-          <a 
-            href="https://github.com/Swethaa
-1805"
+          <a
+            href="https://github.com/Swethaa1805"
             target="_blank"
             rel="noopener noreferrer"
             title="GitHub Profile"
