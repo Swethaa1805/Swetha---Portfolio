@@ -77,6 +77,7 @@ const Skills = () => {
             <p>✔ Data Science – NPTEL</p>
             <p>✔ SQL – HackerRank</p>
             <p>✔ Python – SoloLearn</p>
+            <p>✔ C – SoloLearn</p>
           </div>
         </div>
 
