@@ -1,186 +1,355 @@
 import React from "react";
-import { FaCode, FaAward, FaBriefcase, FaUsers, FaComments, FaLightbulb, FaCogs, FaUsersCog, FaClock, FaBrain } from "react-icons/fa";
+import {
+  FaCode,
+  FaAward,
+  FaLaptopCode,
+  FaUsers,
+  FaComments,
+  FaLightbulb,
+  FaCogs,
+  FaUsersCog,
+  FaClock,
+  FaBrain,
+  FaExternalLinkAlt
+} from "react-icons/fa";
 
 const Skills = () => {
   return (
     <section className="skills-page">
 
-      {/* Page Title */}
-      <h1>My Skills & Expertise</h1>
-      <p>Overview of my technical skills, certifications, and internship experience.</p>
+      <div className="glow"></div>
 
-      {/* Main Blocks */}
-      <div className="blocks-container">
+      {/* HEADER */}
+      <div className="header">
+        <h1>Skills & Expertise</h1>
+        <p>
+          A refined overview of my technical capabilities and hands-on experience.
+        </p>
+      </div>
 
-        {/* Technical Skills */}
-        <div className="block-card">
-          <h2><FaCode className="block-icon"/> Technical Skills</h2>
-          <div className="block-items">
-            <span>Java</span>
-            <span>React.js</span>
-            <span>Spring Boot</span>
-            <span>MySQL</span>
-            <span>HTML & CSS</span>
+      {/* TOP CARDS */}
+      <div className="bento">
+
+        {/* TECH STACK */}
+        <div className="card">
+          <h2><FaCode /> Tech Stack</h2>
+
+          <div className="skills-grid">
+            <p><span></span> Java</p>
+            <p><span></span> MySQL</p>
+            <p><span></span> Python</p>
+            <p><span></span> C</p>
+            <p><span></span> HTML, CSS</p>
+            <p><span></span> JavaScript</p>
+            <p><span></span> React.js</p>
+            <p><span></span> Spring Boot</p>
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="block-card">
-          <h2><FaAward className="block-icon"/> Certifications</h2>
-          <div className="block-items">
-            <span>Java Programming - Sololearn</span>
-            <span>Data Science For Engineers - NPTEL</span>
-            <span>SQL - Sololearn</span>
-            <span>Python - Sololearn</span>
+        {/* CODING */}
+        <div className="card highlight">
+          <h2><FaLaptopCode /> Coding Profiles</h2>
+
+          <div className="profiles">
+            <a href="https://leetcode.com/u/hf1u0L9tWy/" target="_blank" rel="noreferrer">
+              <div>
+                <span>LeetCode</span>
+                <p>50+ Problems Solved</p>
+              </div>
+              <FaExternalLinkAlt />
+            </a>
+
+            <a href="https://www.hackerrank.com/profile/swethaaitpm" target="_blank" rel="noreferrer">
+              <div>
+                <span>HackerRank</span>
+                <p>5★ Problem Solving</p>
+              </div>
+              <FaExternalLinkAlt />
+            </a>
           </div>
         </div>
 
-        {/* Internship */}
-        <div className="block-card internship-card">
-          <h2><FaBriefcase className="block-icon"/> Internship</h2>
-          <div className="block-items">
-            <span className="company-pill">Retech Solutions</span>
-            <span className="internship-desc">
-              Gained hands-on experience in Full Stack Java development, including frontend design, backend setup with Spring Boot, and database integration. Developed a “Student Portal Management System” to efficiently manage student records, authentication, and academic information.
-            </span>
+        {/* CERTIFICATIONS */}
+        <div className="card">
+          <h2><FaAward /> Certifications</h2>
+          <div className="list">
+            <p>✔ Java Programming – NPTEL</p>
+            <p>✔ Data Science – NPTEL</p>
+            <p>✔ SQL – HackerRank</p>
+            <p>✔ Python – SoloLearn</p>
           </div>
         </div>
 
-      </div> {/* Closing blocks-container */}
+      </div>
 
-      {/* Soft Skills Horizontal Card */}
-      <div className="softskills-card">
-        <h2><FaUsers className="block-icon"/> Soft Skills</h2>
-        <div className="softskills-items">
-          <span><FaUsers className="soft-icon"/> Teamwork</span>
-          <span><FaComments className="soft-icon"/> Communication</span>
-          <span><FaLightbulb className="soft-icon"/> Problem-Solving</span>
-          <span><FaCogs className="soft-icon"/> Adaptability</span>
-          <span><FaBrain className="soft-icon"/> Creativity</span>
-          <span><FaUsersCog className="soft-icon"/> Leadership</span>
-          <span><FaClock className="soft-icon"/> Time Management</span>
-          <span><FaBrain className="soft-icon"/> Critical Thinking</span>
+      {/* INTERNSHIP */}
+      <div className="timeline-section">
+        <h2>Internship Experience</h2>
+
+        <div className="timeline">
+
+          <div className="item">
+            <div className="timeline-row">
+              <span className="timeline-dot"></span>
+
+              <div className="content">
+                <h3>Full Stack Java Intern</h3>
+                <h4>Retech Solutions</h4>
+
+                <ul>
+                  <li>Developed a Student Portal using Spring Boot, REST APIs, and MySQL</li>
+                  <li>Implemented secure authentication and user management features</li>
+                  <li>Designed backend services for efficient data processing</li>
+                  <li>Optimized API performance and improved system responsiveness</li>
+                  <li>Structured scalable and maintainable backend architecture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="timeline-row">
+              <span className="timeline-dot"></span>
+
+              <div className="content">
+                <h3>Data Analytics Intern</h3>
+                <h4>Retech Solutions</h4>
+
+                <ul>
+                  <li>Built interactive Power BI dashboards for data visualization</li>
+                  <li>Performed data cleaning and preprocessing of raw datasets</li>
+                  <li>Designed reports to extract meaningful insights</li>
+                  <li>Analyzed trends and supported decision-making processes</li>
+                  <li>Worked on real-time projects improving analytical thinking</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      {/* Styles */}
+      {/* SOFT SKILLS */}
+      <div className="soft-wrapper">
+        <div className="card">
+          <h2>Soft Skills</h2>
+
+          <div className="chips">
+            <span><FaUsers /> Teamwork</span>
+            <span><FaComments /> Communication</span>
+            <span><FaLightbulb /> Problem Solving</span>
+            <span><FaCogs /> Adaptability</span>
+            <span><FaBrain /> Creativity</span>
+            <span><FaUsersCog /> Leadership</span>
+            <span className="center-chip"><FaClock /> Time Management</span>
+          </div>
+        </div>
+      </div>
+
       <style>{`
-        .skills-page {
-          min-height: 100vh;
-          padding: 18px 10%;
-          font-family: "Poppins", sans-serif;
-          background: #0f172a;
-          color: white;
+
+        *{ box-sizing:border-box; }
+        body{ overflow-x:hidden; }
+
+        .skills-page{
+          min-height:100vh;
+          padding:20px 8vw 50px;
+          font-family:"Poppins",sans-serif;
+          background: radial-gradient(circle at top,#0b1220,#050816);
+          color:white;
         }
 
-        h1 {
-          font-size: 40px;
-          color: #38BDF8;
-          margin-bottom: 10px;
-          text-align: center;
+        .glow{
+          position:absolute;
+          width:400px;
+          height:400px;
+          background:radial-gradient(circle,#38BDF8,transparent);
+          top:-120px;
+          right:-50px;
+          filter:blur(100px);
+          opacity:0.2;
         }
 
-        p {
-          text-align: center;
-          color: #cbd5e1;
-          margin-bottom: 40px;
-          font-size: 16px;
+        .header{
+          text-align:center;
+          margin-bottom:40px;
         }
 
-        .blocks-container {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-          margin-bottom: 40px;
+        .header h1{
+          font-size:42px;
+          color:#38BDF8;
         }
 
-        .block-card, .softskills-card {
-          background: rgba(255,255,255,0.05);
-          padding: 25px;
-          border-radius: 16px;
-          border: 1px solid rgba(56,189,248,0.25);
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-          transition: all 0.3s ease;
+        .header p{
+          color:#94a3b8;
+          margin-top:6px;
         }
 
-        /* Glow effect on hover for all cards */
-        .block-card:hover, .softskills-card:hover {
-          box-shadow: 0 0 25px rgba(56,189,248,0.7);
-          border-color: #38BDF8;
-          transform: translateY(-5px);
+        .bento{
+          display:grid;
+          grid-template-columns:repeat(3,1fr);
+          gap:20px;
         }
 
-        .block-card h2, .softskills-card h2 {
-          font-size: 22px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          color: #38BDF8;
-          margin-bottom: 15px;
+        .card{
+          background:rgba(255,255,255,0.04);
+          border:1px solid rgba(56,189,248,0.2);
+          border-radius:16px;
+          padding:20px;
         }
 
-        .block-icon {
-          font-size: 24px;
+        .highlight{
+          background:linear-gradient(135deg, rgba(56,189,248,0.15), rgba(56,189,248,0.05));
         }
 
-        .block-items span {
-          display: block;
-          background: rgba(56,189,248,0.1);
-          margin-bottom: 8px;
-          padding: 8px 12px;
-          border-radius: 12px;
-          font-size: 14px;
-          color: #cbd5e1;
+        h2{
+          color:#38BDF8;
+          margin-bottom:12px;
+          display:flex;
+          align-items:center;
+          gap:8px;
         }
 
-        /* Internship card special styles */
-        .company-pill {
-          background: #38BDF8;
-          color: #0f172a;
-          font-weight: 600;
-          padding: 6px 10px;
-          border-radius: 12px;
-          display: inline-block;
-          margin-bottom: 10px;
+        .skills-grid{
+          display:grid;
+          grid-template-columns:repeat(2,1fr);
+          gap:8px 20px;
+          margin-top:10px;
         }
 
-        .internship-desc {
-          background: rgba(56,189,248,0.05);
-          padding: 10px;
-          border-radius: 12px;
-          line-height: 1.6;
+        .skills-grid p{
+          display:flex;
+          align-items:center;
+          gap:10px;
+          color:#cbd5e1;
+          font-size:14px;
         }
 
-        /* Soft Skills */
-        .softskills-items {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 16px;
-          margin-top: 15px;
+        .skills-grid span{
+          width:7px;
+          height:7px;
+          background:#38BDF8;
+          transform:rotate(45deg);
+          box-shadow:0 0 6px rgba(56,189,248,0.7);
         }
 
-        .softskills-items span {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          background: rgba(56,189,248,0.1);
-          padding: 8px 14px;
-          border-radius: 12px;
-          font-size: 14px;
-          color: #cbd5e1;
+        .profiles{
+          display:flex;
+          flex-direction:column;
+          gap:16px;
+          margin-top:10px;
         }
 
-        .soft-icon {
-          font-size: 14px;
-          margin-top: 1px;
+        .profiles a{
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          padding:14px;
+          border-radius:10px;
+          border:2px solid rgba(56,189,248,0.3);
+          text-decoration:none;
+          color:white;
+          transition:0.3s;
         }
 
-        @media (max-width: 900px) {
-          .blocks-container {
-            grid-template-columns: 1fr;
+        .profiles a:hover{
+          background:rgba(56,189,248,0.1);
+          transform:translateX(5px);
+        }
+
+        /* ✅ FIXED TIMELINE */
+        .timeline{
+          position:relative;
+          margin-top:30px;
+          padding-left:50px;
+        }
+
+        .timeline::before{
+          content:"";
+          position:absolute;
+          top:0;
+          left:20px;
+          width:2px;
+          height:100%;
+          background:rgba(56,189,248,0.3);
+        }
+
+        .timeline-row{
+          display:flex;
+          gap:15px;
+          position:relative;
+        }
+
+        .timeline-dot{
+          position:absolute;
+          left:-35px;
+          top:6px;
+          width:12px;
+          height:12px;
+          background:#38BDF8;
+          border-radius:50%;
+          box-shadow:0 0 10px rgba(56,189,248,0.7);
+        }
+
+        .timeline .item{
+          margin-bottom:30px;
+        }
+
+        .timeline .content h3{
+          margin:0;
+        }
+
+        .timeline .content h4{
+          font-size:16px;
+          color:#38BDF8;
+          margin:6px 0 10px;
+        }
+
+        .timeline .content ul{
+          padding-left:20px;
+        }
+
+        .timeline .content li{
+          margin-bottom:6px;
+          color:#cbd5e1;
+          line-height:1.5;
+        }
+
+        .soft-wrapper{
+          margin-top:40px;
+        }
+
+        .chips{
+          display:flex;
+          flex-wrap:wrap;
+          justify-content:center;
+          gap:12px;
+        }
+
+        .chips span{
+          padding:8px 14px;
+          border-radius:20px;
+          background:rgba(56,189,248,0.1);
+          border:1px solid rgba(56,189,248,0.3);
+          display:flex;
+          gap:6px;
+        }
+
+        .center-chip{
+          display:block;
+          margin:0 auto;
+        }
+
+        @media(max-width:900px){
+          .bento{
+            grid-template-columns:1fr;
+          }
+
+          .skills-grid{
+            grid-template-columns:1fr;
           }
         }
+
       `}</style>
 
     </section>

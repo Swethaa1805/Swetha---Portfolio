@@ -5,118 +5,142 @@ const Footer = () => {
   return (
     <>
       <style>{`
+
         .footer {
-          background: linear-gradient(180deg, #0b1120, #0f172a);
-          color: #cbd5e1;
-          padding: 25px 8%;
-          text-align: center;
-          border-top: 1px solid rgba(255,255,255,0.08);
+          background: #0b1120;
+          color: #94a3b8;
+          padding: 18px 8%;
+          border-top: 1px solid rgba(255,255,255,0.06);
+        }
+
+        .footer-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        /* LEFT */
+        .footer-left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .footer-logo {
+          width: 34px;
+          height: 34px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-weight: 600;
+          font-size: 13px;
+          color: white;
+          background: linear-gradient(135deg, #38BDF8, #2563eb);
+          box-shadow: 0 0 10px rgba(56,189,248,0.4);
         }
 
         .footer-name {
-          font-size: 1.2rem;
-          font-weight: 600;
-          color: #ffffff;
-          margin-bottom: 6px;
-          letter-spacing: 0.5px;
+          font-size: 13px;
+          color: #e2e8f0;
+          font-weight: 500;
         }
 
-        .footer-tagline {
-          font-size: 0.85rem;
-          margin-bottom: 14px;
-          color: #94a3b8;
+        /* CENTER */
+        .footer-center {
+          font-size: 14px;
+          text-align: center;
+          flex: 1;
+          color: #c2c8d1;
+          font-weight:50;
         }
 
+        /* RIGHT */
         .footer-icons {
           display: flex;
-          justify-content: center;
-          gap: 18px;
-          margin-bottom: 14px;
+          gap: 12px;
         }
 
         .footer-icons a {
-          width: 36px;
-          height: 36px;
+          width: 32px;
+          height: 32px;
           display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 50%;
           background: rgba(255,255,255,0.05);
           color: #cbd5e1;
-          font-size: 1rem;
-          transition: all 0.3s ease;
+          font-size: 13px;
+          transition: 0.25s;
         }
 
         .footer-icons a:hover {
-          background: #2563eb;
-          color: #ffffff;
-          transform: translateY(-3px);
-          box-shadow: 0 0 10px rgba(37,99,235,0.6);
+          background: #38BDF8;
+          color: white;
+          transform: translateY(-2px);
+          box-shadow: 0 0 10px rgba(56,189,248,0.5);
         }
 
-        .footer-copy {
-          font-size: 0.75rem;
-          color: #64748b;
-          margin-top: 8px;
-        }
-
-        /* Responsive */
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-          .footer {
-            padding: 20px 6%;
+          .footer-container {
+            flex-direction: column;
+            text-align: center;
           }
 
-          .footer-name {
-            font-size: 1.1rem;
-          }
-
-          .footer-tagline {
-            font-size: 0.8rem;
+          .footer-left {
+            justify-content: center;
           }
         }
+
       `}</style>
 
       <footer className="footer">
-        <div className="footer-name">Swetha</div>
+        <div className="footer-container">
 
-        <div className="footer-tagline">
-          Building clean, scalable and impactful digital experiences.
-        </div>
+          {/* LEFT */}
+          <div className="footer-left">
+            <div className="footer-logo">SA</div>
+            <div className="footer-name">Swetha</div>
+          </div>
 
-        <div className="footer-icons">
+          {/* CENTER */}
+          <div className="footer-center">
+            © {new Date().getFullYear()} • Built with passion & clean code
+          </div>
 
-          {/* Email */}
-          <a
-            href="mailto:swethaa1805@email.com"
-            title="Send Email"
-          >
-            <FaEnvelope />
-          </a>
+          {/* RIGHT */}
+          <div className="footer-icons">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=swethaa1805@email.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Email"
+            >
+              <FaEnvelope />
+            </a>
 
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/swetha-a-0b1712382/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn Profile"
-          >
-            <FaLinkedin />
-          </a>
+            <a
+              href="https://www.linkedin.com/in/swetha-a-0b1712382/"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
 
-          {/* GitHub */}
-          <a
-            href="https://github.com/Swethaa1805"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub Profile"
-          >
-            <FaGithub />
-          </a>
+            <a
+              href="https://github.com/Swethaa1805"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+            >
+              <FaGithub />
+            </a>
+          </div>
 
-        </div>
-
-        <div className="footer-copy">
-          © {new Date().getFullYear()} Swetha. All Rights Reserved.
         </div>
       </footer>
     </>

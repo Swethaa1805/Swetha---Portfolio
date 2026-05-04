@@ -4,135 +4,261 @@ export default function About() {
   return (
     <div className="about-page">
 
-      <div className="about-wrapper">
+      {/* HERO */}
+      <div className="hero">
+        <h1>
+          I’m a developer who turns <span>ideas into systems</span>.
+        </h1>
+      </div>
+
+      {/* MAIN */}
+      <div className="main">
 
         {/* LEFT SIDE */}
-        <div className="about-left">
-          <h1>
-            About <span className="highlight">Me</span>
-          </h1>
+        <div className="story">
 
-          <p>
-            I am a curious and motivated individual with a passion for technology and innovation. I enjoy exploring new ideas, experimenting with creative solutions, and turning concepts into real-world applications. I love building digital experiences that are user-friendly, efficient, and impactful. Continuously learning and adapting, I aim to grow both technically and creatively while contributing to projects that make a difference. My interests include Full Stack Development, Data Analytics, and discovering tools and technologies that enhance problem-solving and innovation.
-          </p>
+          <div className="line-block">
+            <div className="dot"></div>
+
+            <div className="text">
+              <h2>What I Build</h2>
+              <p>
+                I build full-stack web applications that combine clean UI design with strong backend logic.
+                My focus is on creating real-world digital products that are fast, responsive, and scalable.
+              </p>
+            </div>
+          </div>
+
+          <div className="line-block">
+            <div className="dot"></div>
+
+            <div className="text">
+              <h2>My Approach</h2>
+              <p>
+                I follow a structured development process — design first, then logic, then optimization.
+                Every project goes through iteration to improve performance, usability, and clarity.
+              </p>
+            </div>
+          </div>
+
+          <div className="line-block">
+            <div className="dot"></div>
+
+            <div className="text">
+              <h2>What Drives Me</h2>
+              <p>
+                I am motivated by solving meaningful problems through technology.
+                I enjoy turning ideas into interactive systems that feel intuitive and impactful for users.
+              </p>
+            </div>
+          </div>
+
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="about-right">
+        {/* RIGHT SIDE (UNCHANGED) */}
+        <div className="side">
 
-          {/* EDUCATION */}
-          <div className="about-card">
-            <div className="card-header">
-              <h3>🎓 Education</h3>
-              <span className="year">📅 2023 – 2027</span>
-            </div>
-            <p>B.Tech in Information Technology</p>
+          <div className="card main-card">
+            <h3>👤 About Me</h3>
+
             <p>
-              As a student of the IT department, I am gaining solid academic knowledge and practical exposure through projects and departmental activities that enhance my problem-solving and technical understanding.
+              I am an Information Technology student passionate about building
+              practical and scalable software solutions.
+            </p>
+
+            <p>
+              I enjoy understanding systems deeply and converting ideas into
+              clean, structured applications.
             </p>
           </div>
 
-          {/* INTERESTS */}
-          <div className="about-card">
-            <h3>💡 Interests</h3>
-            <ul>
-              <li>Full Stack Development</li>
-              <li>Data Analytics</li>
-              <li>DBMS</li>
-              <li>Learning New Technologies</li>
-            </ul>
+          <div className="card">
+            <h3>🎓 Education</h3>
+
+            <p>B.Tech – Information Technology</p>
+            <p className="muted">Panimalar Engineering College</p>
+
+            <div className="row">
+              <span>2023 – 2027</span>
+              <span className="cgpa">CGPA: 8.81</span>
+            </div>
           </div>
 
         </div>
 
       </div>
 
+      {/* STATS */}
+      <div className="stats">
+
+        <div className="stat-card">
+          <h3>4</h3>
+          <p>Projects</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>2</h3>
+          <p>Internships</p>
+        </div>
+
+        <div className="stat-card">
+          <h3>4</h3>
+          <p>Certifications</p>
+        </div>
+
+      </div>
+
+      {/* STYLE */}
       <style>{`
 
         .about-page {
           min-height: 100vh;
-          padding: 40px 10%; /* Reduced top padding */
+          padding: 20px 10%;
           font-family: "Poppins", sans-serif;
-          background: #0f172a;
+          background: radial-gradient(circle at top, #0b1220, #050816);
           color: white;
         }
 
-        .about-wrapper {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 60px;
-          align-items: start; /* Align content to top */
+        .hero h1 {
+          font-size: 44px;
+          line-height: 1.3;
         }
 
-        .about-left {
+        .hero span {
+          color: #38BDF8;
+        }
+
+        .main {
+          display: grid;
+          grid-template-columns: 1.2fr 1fr;
+          gap: 40px;
+          margin-top: 50px;
+        }
+
+        /* ================= LEFT TIMELINE ================= */
+
+        .story {
           display: flex;
           flex-direction: column;
-          gap: 10px;
         }
 
-        .about-left h1 {
-          font-size: 46px;
+        .line-block {
+          display: flex;
+          align-items: flex-start;
+          gap: 14px;
+          margin-bottom: 48px;
+        }
+
+        .dot {
+          width: 10px;
+          height: 10px;
+          margin-top: 8px;
+          border-radius: 50%;
+          background: #38BDF8;
+          box-shadow: 0 0 10px #38BDF8;
+          flex-shrink: 0;
+        }
+
+        .text {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .text h2 {
+          color: #38BDF8;
+          font-size: 18px;
+          margin: 0;
+          line-height: 1.2;
+        }
+
+        .text p {
+          margin-top: 6px;
+          color: #cbd5e1;
+          line-height: 1.7;
+        }
+
+        /* ================= RIGHT SIDE ================= */
+
+        .side {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .card {
+          padding: 18px;
+          border-radius: 14px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(56,189,248,0.15);
+        }
+
+        .main-card {
+          border: 1px solid rgba(56,189,248,0.3);
+          box-shadow: 0 0 18px rgba(56,189,248,0.08);
+        }
+
+        h2, h3 {
+          color: #38BDF8;
           margin-bottom: 10px;
         }
 
-        .highlight {
-          color: #38BDF8; /* Blue color for "Me" */
-        }
-
-        .about-left p {
+        p {
           color: #cbd5e1;
-          line-height: 1.8;
-          font-size: 18px;
+          line-height: 1.6;
         }
 
-        .about-right {
-          display: flex;
-          flex-direction: column;
-          gap: 25px;
+        .muted {
+          color: #94a3b8;
         }
 
-        /* PREMIUM GLOW CARD */
-        .about-card {
-          background: rgba(255,255,255,0.05);
-          padding: 26px;
-          border-radius: 16px;
-          border: 1px solid rgba(56,189,248,0.25);
-          transition: 0.4s;
-          box-shadow: 0 0 15px rgba(56,189,248,0.15);
-        }
-
-        .about-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 0 25px rgba(56,189,248,0.6);
-          border-color: #38BDF8;
-        }
-
-        .card-header {
+        .row {
           display: flex;
           justify-content: space-between;
-          align-items: center;
-          margin-bottom: 10px;
+          margin-top: 10px;
         }
 
-        .year {
-          background: #54aed4;
-          padding: 4px 12px;
-          border-radius: 20px;
-          font-size: 13px;
-          font-weight: 700;
+        .cgpa {
+          color: #38BDF8;
+          font-weight: 600;
         }
 
-        ul {
-          padding-left: 18px;
+        /* ================= STATS ================= */
+
+        .stats {
+          margin-top: 50px;
+          display: flex;
+          gap: 20px;
         }
 
-        li {
-          margin-bottom: 6px;
+        .stat-card {
+          flex: 1;
+          text-align: center;
+          padding: 20px;
+          border-radius: 14px;
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(56,189,248,0.15);
+        }
+
+        .stat-card h3 {
+          color: #38BDF8;
+          font-size: 28px;
+        }
+
+        .stat-card p {
+          color: #94a3b8;
         }
 
         @media (max-width: 900px) {
-          .about-wrapper {
+          .main {
             grid-template-columns: 1fr;
+          }
+
+          .stats {
+            flex-direction: column;
+          }
+
+          .hero h1 {
+            font-size: 32px;
           }
         }
 
